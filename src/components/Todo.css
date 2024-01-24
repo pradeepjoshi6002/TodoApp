@@ -59,7 +59,7 @@ li > p {
   word-wrap: break-word;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 711px) {
   .input-box {
     width: 70vw;
   }
