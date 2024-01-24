@@ -57,11 +57,12 @@ li {
 li > p {
   background-color: white;
   word-wrap: break-word;
+  word-break: break-all;
 }
 
 @media screen and (max-width: 711px) {
   .input-box {
-    width: 70vw;
+    width: 80vw;
   }
   li {
     width: 80vw;
