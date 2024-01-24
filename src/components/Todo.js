@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import "./Todo.css";
 export default class Todo extends Component {
   constructor() {
     super();
@@ -36,20 +36,28 @@ export default class Todo extends Component {
   render() {
     return (
       <>
-        <input
-          type="text"
-          value={this.state.currentTasks}
-          onChange={(e) => this.handleChange(e)}
-        />
-        <button onClick={this.handleClick}>Submit</button>
-        <ol>
-          {this.state.tasks.map((ele) => (
-            <li key={ele.id}>
-              <p>{ele.task}</p>
-              <button onClick={() => this.handleDelete(ele.id)}>Delete</button>
-            </li>
-          ))}
-        </ol>
+        <main>
+          <div className="input-box">
+            <input
+              spellCheck="false"
+              placeholder="enter your task"
+              type="text"
+              value={this.state.currentTasks}
+              onChange={(e) => this.handleChange(e)}
+            />
+            <button onClick={this.handleClick}>ADD</button>
+          </div>
+          <ol>
+            {this.state.tasks.map((ele) => (
+              <li key={ele.id}>
+                <p>{ele.task}</p>
+                <button onClick={() => this.handleDelete(ele.id)}>
+                  Delete
+                </button>
+              </li>
+            ))}
+          </ol>
+        </main>
       </>
     );
   }
